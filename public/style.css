@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+/* Mobile */
+@media (max-width: 700px) {
+    body {
+        display: flex;
+        width: 100vw;
+        flex-direction: column;
+        background-color: #363945;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    h1 {
+        color: #2890ad;
+        font-family: "Krona One";
+        font-size: 45px;
+        padding: 30px;
+    }
+    
+    li {
+        width: 94vw;
+        background-color: #080D1F;
+        margin-bottom: 30px;
+        padding: 30px;
+
+    }
+
+    .postsarea {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .eachPost {
+        flex-basis: 85%; 
+        color: white;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 22px;
+    }
+
+    #postAuthor {
+    }
+
+    #postTime {
+        color: #7f7f7f;
+    }
+
+    #postTitle {
+        color: #c3c3c3;
+        font-size: 23px;
+        text-align: left;
+        margin-left: 80px;
+    }
+
+    #postContent {
+        color: #c1c1c1;
+        text-align: justify;
+        letter-spacing: 1px;
+    }
+}
+
+ /* Tablets to Desktops */
+@media (min-width: 701px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #373737;
+        text-align: center;
+        margin: 0;
+    }
+    
+    
+    h1 {
+        color: #2890ad;
+        font-family: "Krona One";
+        font-size: 45px;
+        padding: 20px;
+    }
+    
+    li {
+        background-color: #080D1F;
+        margin: 20px 0px;
+        padding: 20px;
+    }
+    
+    .postsarea {
+        display: flex;
+        justify-content: center;
+        width: 93%;
+        height: 100%;
+        background-color: #363945;
+    }
+    
+    .eachPost {
+        flex-basis: 95%;
+        color: white;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 27px;
+    }
+    
+    #postAuthor {
+        
+    }
+
+    #postTime {
+        color: #7f7f7f;
+    }
+
+    #postTitle {
+        color: #c3c3c3;
+        font-size: 30px;
+        text-align: left;
+        margin-left: 93px;
+    }
+
+    #postContent {
+        color: #c1c1c1;
+        text-align: justify;
+        letter-spacing: 2px;
+    }
+
+}
+
+
+
