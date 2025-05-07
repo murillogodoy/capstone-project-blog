@@ -79,7 +79,7 @@
     .content {
         display: none;
         position: absolute;
-        left: -35%;
+        left: -82%;
         border-radius: 4px;
         box-shadow: 0 2px 5px #1d1d1e80;
     }
@@ -150,11 +150,43 @@
         color: #7f7f7f;
     }
 
+    .dropdown {
+        display: inline-block;
+        position: absolute;
+        left: 91%;
+    }
+
+    .dropdown button {
+        background-color: inherit;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .dropdown a {
+        display: flex;
+        flex-direction: column;
+        width: 45px;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.432);
+        text-decoration: none;
+    }
+
+    .dropdown a:hover {
+        color: #2890ad;
+    }
+
+    .content {
+        display: none;
+        position: absolute;
+        top: 70%;
+        right: 24%;
+    }
+
     #postTitle {
         color: #c3c3c3;
         font-size: 30px;
-        text-align: left;
-        margin-left: 93px;
+        text-align: center;
     }
 
     #postContent {
