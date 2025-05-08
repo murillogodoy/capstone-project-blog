@@ -13,6 +13,22 @@
         overflow-x: hidden;
     }
 
+    .newPostButton {
+        text-decoration: none;
+        width: 75px;
+        height: 17px;
+        padding: 5px;
+        margin-bottom: 10px;
+        color: white;
+        background-color: #2890ad;
+        
+    }
+
+    .newPostButton:hover {
+        color: #353535;
+        box-shadow: inset -1px 1px 1px 0px black;
+    }
+
     h1 {
         color: #2890ad;
         font-family: "Krona One";
@@ -111,6 +127,21 @@
         margin: 0;
     }
     
+    .newPostButton {
+        text-decoration: none;
+        color: white;
+        height: 18px;
+        width: 100px;
+        padding: 6px;
+        margin: 30px 0px;
+        background-color: #2890ad;
+        
+    }
+
+    .newPostButton:hover {
+        color: #353535;
+        box-shadow: inset -1px 1px 5px 2px #353535;
+    }
     
     h1 {
         color: #2890ad;

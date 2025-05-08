@@ -41,6 +41,11 @@ app.get("/posts", (req, res) => {
     res.json(posts);
 });
 
+app.post("/newPost", (req, res) => {
+    const newId = lastId + 1;
+    
+});
+
 
 app.listen(port, () => {
     console.log(`API is running on http://localhost:${port}`);

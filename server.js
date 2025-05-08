@@ -21,6 +21,18 @@ app.get("/", async (req, res) => {
     }
 });
 
+app.get("/new", (req, res) => {
+    try {
+        res.render("modify.ejs", {header: "New Post" });
+    } catch (error) {
+        res.status(404).json({ message: "Cannot access site"});
+    }
+});
+
+app.post("/newPost", async (req, res) => {
+    const response = await axios.post(`${API_URL}/newPost`, req.body);
+});
+
 app.listen(port, () => {
     console.log(`Backend server is running on http://localhost:${port}`);
 });
