@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modify Post</title>
+    <link rel="stylesheet" href="modify.css">
 </head>
 <body>
     <h1> <%= header %> </h1>
-    <form action="/newPost" method="post">
+    <div class="formarea">
+        <form action="/newPost" method="post">
+            <input type="text" name="ftitle" id="ftitle" placeholder="Title" required>
+            <textarea name="ftext" id="ftext" placeholder="Write something..." required></textarea>
+            <input type="text" name="fauthor" id="fauthor" placeholder="Author" maxlength="35" required>
+        </form>
+    </div>
+    <script>
+        const fieldElements = [document.getElementById("ftitle"), document.getElementById("fauthor")];
 
-    </form>
+        function resizeWidth(fieldsArray) {
+            fieldsArray.forEach(fieldE => {
+                fieldE.addEventListener('input', function() {
+                    this.style.width = "auto";
+                    this.style.width = (this.scrollWidth + 10) + 'px';
+                });
+            });
+        }
+        resizeWidth(fieldElements);
+    </script>
 </body>
 </html>
