@@ -41,9 +41,26 @@ app.get("/posts", (req, res) => {
     res.json(posts);
 });
 
+app.get("/posts/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    const selectedPost = posts.find((post) => post.id === id);
+    if (!selectedPost) return res.status(404).json({message: "Post not found"});
+    res.json(selectedPost);
+});
+
 app.post("/newPost", (req, res) => {
     const newId = lastId + 1;
-    
+    const newPost = {
+        id: newId,
+        title: req.body.ftitle,
+        content: req.body.ftext,
+        author: req.body.fauthor,
+        date: new Date()
+    }
+
+    lastId = newId;
+    posts.push(newPost);
+    res.status(201).json(newPost);
 });
 
 
