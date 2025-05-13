@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modify Post</title>
-    <link rel="stylesheet" href="modify.css">
+    <link rel="stylesheet" href="/styles/modify.css">
 </head>
 <body>
     <h1> <%= header %> </h1>
-    <div class="formarea">
-        <form action="/newPost" method="post">
-            <input type="text" name="ftitle" id="ftitle" placeholder="Title" required>
-            <textarea name="ftext" id="ftext" placeholder="Write something..." required></textarea>
-            <input type="text" name="fauthor" id="fauthor" placeholder="Author" maxlength="35" required>
-            <button type="submit" id="newPostButton">Create Post</button>
-        </form>
-    </div>
+
+    <% if (locals.post) { %>
+        <div class="formarea">
+            <form action="/editPost/<%= post.id %>" method="post">
+                <input type="text" name="ftitle" id="ftitle" placeholder="Title" value="<%= post.title %>" required>
+                <textarea name="ftext" id="ftext" placeholder="Write something..." required><%= post.content %></textarea>
+                <input type="text" name="fauthor" id="fauthor" placeholder="Author" maxlength="35" value="<%= post.author %>" required>
+                <button type="submit" id="newPostButton"><%= submit %></button>
+            </form>
+        </div>
+    <% } else { %>
+        <div class="formarea">
+            <form action="/newPost" method="post">
+                <input type="text" name="ftitle" id="ftitle" maxlength="120" placeholder="Title" required>
+                <textarea name="ftext" id="ftext" placeholder="Write something..." required></textarea>
+                <input type="text" name="fauthor" id="fauthor" placeholder="Author" maxlength="35" required>
+                <button type="submit" id="newPostButton"><%= submit %></button>
+            </form>
+        </div>
+    <% } %>   
     <script>
         const fieldElements = [document.getElementById("ftitle"), document.getElementById("fauthor")];
 
@@ -28,6 +40,7 @@
             });
         }
         resizeWidth(fieldElements);
+        
     </script>
 </body>
 </html>
