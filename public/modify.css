@@ -31,8 +31,6 @@ form {
 }
 
 #ftitle {
-    width: auto;
-    min-width: 200px;
     max-width: 500px;
     height: 7%;
     margin-bottom: 40px;
@@ -54,8 +52,6 @@ form {
 }
 
 #fauthor {
-    width: auto;
-    min-width: 200px;
     height: 7%;
     box-sizing: border-box;
     padding: 6px;
