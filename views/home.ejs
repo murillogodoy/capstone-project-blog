@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connekt</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
     <h1>Connekt</h1>
@@ -20,8 +20,8 @@
                             <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
                           </svg></button>
                           <div class="content">
-                            <a href="#">Edit</a>
-                            <a href="#">Delete</a>
+                            <a href="/edit/<%= post.id %>">Edit</a>
+                            <a href="/delete/<%= post.id %>">Delete</a>
                           </div>
                     </div>
                     <h2 id="postTitle"> 
