@@ -48,7 +48,7 @@ app.get("/posts/:id", (req, res) => {
     res.json(selectedPost);
 });
 
-app.post("/newPost", (req, res) => {
+app.post("/posts", (req, res) => {
     const newId = lastId + 1;
     const newPost = {
         id: newId,
@@ -61,6 +61,59 @@ app.post("/newPost", (req, res) => {
     lastId = newId;
     posts.push(newPost);
     res.status(201).json(newPost);
+});
+
+app.patch("/posts/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    const post = posts.findIndex((post) => post.id === id);
+    if (!post === -1) {
+        return res.status(404).json({message: "Post not found"});
+    }
+
+    const selectedPost = posts[post];
+    let hasChanges = false;
+
+    if (req.body.ftitle !== undefined && req.body.ftitle !== selectedPost.title) {
+        selectedPost.title = req.body.ftitle;
+        hasChanges = true;
+    }
+
+    if (req.body.ftext !== undefined && req.body.ftext !== selectedPost.content) {
+        selectedPost.content = req.body.ftext;
+        hasChanges = true;
+    }
+
+    if (req.body.fauthor !== undefined && req.body.fauthor !== selectedPost.author) {
+        selectedPost.author = req.body.fauthor;
+        hasChanges = true;
+    }
+    
+    if (hasChanges) {
+        const dateString = selectedPost.date instanceof Date ? selectedPost.date.toISOString() : selectedPost.date;
+        const alreadyEdited = dateString.includes("(Edited)");
+
+        if (!alreadyEdited) {
+            selectedPost.date = dateString + " (Edited)";
+        }
+    }
+    res.json(selectedPost);
+});
+
+app.delete("/posts/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    const post = posts.findIndex((post) => post.id === id);
+    if (!post === -1) {
+        return res.status(404).json({message: "Post not found"});
+    }
+    posts.splice(post, 1);
+
+    posts.forEach((post, index) => {
+        post.id = index + 1;
+    });
+
+    lastId = posts.length;
+
+    res.status(200).json({message: "Post deleted successfully"});
 });
 
 
