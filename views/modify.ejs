@@ -11,7 +11,7 @@
 
     <% if (locals.post) { %>
         <div class="formarea">
-            <form action="/editPost/<%= post.id %>" method="post">
+            <form action="/api/posts/<%=post.id%>" method="post">
                 <input type="text" name="ftitle" id="ftitle" placeholder="Title" value="<%= post.title %>" required>
                 <textarea name="ftext" id="ftext" placeholder="Write something..." required><%= post.content %></textarea>
                 <input type="text" name="fauthor" id="fauthor" placeholder="Author" maxlength="35" value="<%= post.author %>" required>
@@ -20,7 +20,7 @@
         </div>
     <% } else { %>
         <div class="formarea">
-            <form action="/newPost" method="post">
+            <form action="/api/posts" method="post">
                 <input type="text" name="ftitle" id="ftitle" maxlength="120" placeholder="Title" required>
                 <textarea name="ftext" id="ftext" placeholder="Write something..." required></textarea>
                 <input type="text" name="fauthor" id="fauthor" placeholder="Author" maxlength="35" required>
