@@ -13,9 +13,7 @@ cd capstone-project-blog
 </code></pre>
 
 <h3>3. Start the application</h3>
-<pre><code>npm start
-</code></pre>
-<p>or</p>
+Run each in separate terminal windows:
 <pre><code>node index.js
 </code></pre>
 <pre><code>node server.js
@@ -27,4 +25,4 @@ cd capstone-project-blog
 <br>(or the port specified in your configuration).</p>
 
 <h2>API</h2>
-<p>This project uses a custom API for blog posts. Make sure any required endpoints are running and configured as described in the code or documentation.</p>
+<p>This project uses a custom API for blog posts. Make sure any required endpoints are running and configured as described in the code</p>
