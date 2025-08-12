@@ -1,10 +1,30 @@
-# capstone-project-blog
-A blog project using HTML, CSS, JavaScript, Express, Axios &amp; a personally created API for showing posts.
+<h1>Capstone Project Blog</h1>
+<p>A full-stack blog application using Express, HTML, CSS, JavaScript, Axios, and a custom API for posts.</p>
 
-How to view this project:<br>
-1 - Download the folder<br>
-2 - Open the folder on a text editor<br>
-3 - Open the terminal and run npm i to install required packages<br>
-4 - Create another terminal, keeping the first one<br>
-5 - Run nodemon index.js and nodemon server.js on each terminal<br>
-6 - Open browser at localhost:3000
+<h2>Getting Started</h2>
+
+<h3>1. Clone the repository</h3>
+<pre><code>git clone https://github.com/murillogodoy/capstone-project-blog.git
+cd capstone-project-blog
+</code></pre>
+
+<h3>2. Install dependencies</h3>
+<pre><code>npm install
+</code></pre>
+
+<h3>3. Start the application</h3>
+<pre><code>npm start
+</code></pre>
+<p>or</p>
+<pre><code>node index.js
+</code></pre>
+<pre><code>node server.js
+</code></pre>
+
+
+<h3>4. Access the app</h3>
+<p>Open your browser and go to <a href="http://localhost:3000">http://localhost:3000</a>
+<br>(or the port specified in your configuration).</p>
+
+<h2>API</h2>
+<p>This project uses a custom API for blog posts. Make sure any required endpoints are running and configured as described in the code or documentation.</p>
