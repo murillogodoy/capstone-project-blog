@@ -13,10 +13,9 @@ cd capstone-project-blog
 </code></pre>
 
 <h3>3. Start the application</h3>
-Run each in separate terminal windows:
-<pre><code>node index.js
-</code></pre>
-<pre><code>node server.js
+Run:
+<pre><code>
+  npm start
 </code></pre>
 
 
