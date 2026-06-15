@@ -14,9 +14,7 @@ cd capstone-project-blog
 
 <h3>3. Start the application</h3>
 Run:
-<pre><code>
-  npm start
-</code></pre>
+<pre><code>npm start</code></pre>
 
 
 <h3>4. Access the app</h3>
